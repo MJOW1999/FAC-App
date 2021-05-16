@@ -141,7 +141,7 @@ i a:hover{
 .ic__images{
   display: flex;
   transform: translateX(0);
-  transition: transform: 0.25s;
+  transition: transform 0.25s;
 }
 img{
   border-radius: 5px;
