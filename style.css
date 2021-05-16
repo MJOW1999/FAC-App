@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Open+Sans&family=Rubik:wght@600&display=swap');
+html{
+  background-color: black;
+}
+:root{
+  --main-radius: 5px;
+  --main-padding: 5px;
+}
+.main-grid{
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 0.5fr 1fr 0.8fr;
+	grid-template-rows: 0.4fr 0.8fr 1.5fr 0.8fr;
+	grid-template-areas:
+		"nav nav nav"
+		"sidebar Intro content1"
+		"content2 content2 content3"
+		"footer footer footer";
+	grid-gap: 0.2rem;
+	font-size: 12px;
+	text-align: center;
+}
+h1{
+	font-family: "Rubik", sans-serif;
+	color: gold;
+}
+i a{
+	color: white;
+}
+i a:hover{
+	color: firebrick;
+}
+#navbar{
+	background-color: #1a1a2e;
+	grid-area: nav;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+	font-size: 15px;
+	width: 100%;
+}
+#navbar a {
+	float: left;
+	width: 20%;
+	color:  white;
+	text-decoration: none;
+	font-family: "Rubik", sans-serif;
+	font-size: 20px;
+}
+#navbar a:hover{
+	color: red;
+}
+#Intro{
+  background-color: #16213e;
+  grid-area: Intro;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  font-size: 15px;
+  color: goldenrod;
+  font-family: "Rubik", sans-serif;
+}
+#sidebar{
+	background-color: #16213e;
+	grid-area: sidebar;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+	color: white;
+	font-family: "Montserrat", sans-serif;
+}
+#sidebar ul{
+	list-style-type: circle;
+	text-align: left;
+	font-family: "Open Sans", sans-serif;
+}
+#content1{
+	background-color: #16213e;
+	grid-area: content1;
+	border-radius: var(--main-radius);
+	padding: var(--main-padding);
+	font-size: 13px;
+	font-family: "Montserrat", sans-serif;
+	color: goldenrod;
+}
+#content1 p{
+	font-family: "Open Sans", sans-serif;
+	color: white;
+}
+#content2{
+	background-color: #0f3460;
+	grid-area: content2;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+	padding-right: 15px;
+	font-size: 13px;
+	font-family: "Montserrat", sans-serif;
+}
+#content2 ol{
+	list-style-type: none;
+	padding: 0;
+	color: white;
+}
+#content2 h3{
+	color: goldenrod;
+}
+#content3{
+	background-color: #0f3460;
+	grid-area: content3;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+	display: inline-block;
+	font-family: "Montserrat", sans-serif;
+	color: gold;
+}
+#content3 h1{
+	margin-bottom: 30px;
+}
+#content3 ol{
+	font-size: 16px;
+	margin-top: 20px;
+	color: goldenrod;
+}
+#project-description a{
+  font-size:14px;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: gold;
+}
+#project-description a:hover{
+  color: firebrick;
+  font-size:20px;
+}
+.ic {
+  align-items: center;
+  display: flex;
+  margin: .5rem auto;
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  justify-content: start;
+}
+.ic__images{
+  display: flex;
+  transform: translateX(0);
+  transition: transform: 0.25s;
+}
+img{
+  border-radius: 5px;
+  width: 300px;
+  margin: 0;
+  padding: 0;
+}
+.ic__button{
+  background-color: black;
+  border: 0;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  height: 3rem;
+  opacity: 0.05;
+  position: absolute;
+  transition: opacity 0.25s;
+  width: 3rem;
+  z-index: 1;
+}
+#previous{
+  left: 5px;
+}
+#next{
+  right: 5px;
+}
+.ic__button:hover{
+  opacity: 0.5;
+}
+#sm-links{
+  background-color: #e94560;
+  grid-area: footer;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  color: gainsboro;
+}
+#sm-links h2{
+  font-family: "Lato", sans-serif;
+}
+#sm-links h3{
+  font-family: "Montserrat", sans-serif;
+}
+.iconify{
+  display: inline-block;
+  padding: 20px;
+  margin-left: 50px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.iconify:hover{
+  opacity:0.5;
+}
+#cw-logo{
+  background: #b1361e;
+  color: white;
+}
+#gh-logo{
+  background:#4078c0;
+  color: white;
+}
+#fcc-logo{
+  color: #ffffff;
+  background: #0a0a23;
+}
+@media only screen and (max-width: 800px){
+	.main-grid{
+		grid-template-columns: 1fr;
+		grid-template-rows: 0.4fr 0.5fr 1fr 1.5fr 1.2fr 0.5fr 0.6fr;
+		grid-template-areas:
+			"nav"
+			"Intro"
+			"content1"
+			"content2"
+			"content3"
+			"sidebar"
+			"footer";
+	}
+	#Intro{
+		font-size: 14px;
+	}
+	#navbar a{
+		width: 100%;
+	}
+	#sidebar{
+		background-color: #0f3460;
+	}
+	#sidebar h2{
+		color: gold;
+	}
+	.iconify{
+		margin-left: 10px;
+	}
+}
